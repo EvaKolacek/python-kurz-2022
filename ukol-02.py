@@ -494,16 +494,12 @@ staty = [
 region=input('Zadej jaký region tě zajímá: ')
 print(f"V regionu {region} se nachází tyto státy:")
 neznamy=False
-for stat in staty:    
+for stat in staty: 
     if stat['region']==region:
         print(stat['name'])
-        neznamy=''
-    elif neznamy==True:
-        neznamy=('Neznamý region')
-print(neznamy)
-
-
-    
+        neznamy=True
+if neznamy!=True:
+    print('Neznamý region')
 
 #Vytvoř program, který se uživatele zeptá na region, který ho zajímá. Následně sestav slovník, který bude obsahovat celkové počty obyvatel pro jednotlivé subregiony v daném regionu. Například pokud uživatel zadá Europe, tak by měl být výsledek následující:
 
@@ -514,6 +510,6 @@ for stat in staty:
         #if stat['subregion']==stat['subregion']:
         pocet_obyvatel+=(stat['population'])
         print(f"{stat['subregion']} {pocet_obyvatel}")
-#Tohle se mi už nepodařilo doladit :-(
+
 
 
