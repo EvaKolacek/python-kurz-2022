@@ -11,10 +11,11 @@ baliky = {
 }
 
 kod_baliku=input("Zadej kód balíku: ")
+print(kod_baliku==baliky)
 
 if kod_baliku in baliky:
-    Prevzato=True
-    if Prevzato==baliky[kod_baliku]:
+    prevzato= True
+    if prevzato==baliky[kod_baliku]:
         print(f"Balík s kódem {kod_baliku} již byl předán!")
     else:
         print(f"Balík s kódem {kod_baliku} čeká na výdej!")
